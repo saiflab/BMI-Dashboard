@@ -33,5 +33,4 @@ else:
 
 # Footer
 st.write("---")
-st.write("Developed with Streamlit. BMI = weight(kg) / height(m)^2")
 st.markdown("**Created by Ahmed Saif**", unsafe_allow_html=True)
