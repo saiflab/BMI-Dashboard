@@ -1,9 +1,11 @@
 
 import streamlit as st
 
-# Set up the title and description
+# Set up the title and logo
+st.image("logo.jpg", use_column_width=True)
 st.title("BMI Calculator Dashboard")
 st.write("Calculate your Body Mass Index (BMI) using your height and weight.")
+st.write("Created by Ahmed Saif")
 
 # Input for weight in kilograms
 weight = st.number_input("Enter your weight (kg):", min_value=1.0, step=0.1)
