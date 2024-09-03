@@ -1,21 +1,22 @@
-
 import streamlit as st
 
 # Set up the title and logo
 st.image("logo.jpg", use_column_width=True)
 st.title("BMI Calculator Dashboard")
 st.write("Calculate your Body Mass Index (BMI) using your height and weight.")
-st.write("Created by Ahmed Saif")
 
 # Input for weight in kilograms
 weight = st.number_input("Enter your weight (kg):", min_value=1.0, step=0.1)
 
-# Input for height in meters
-height = st.number_input("Enter your height (m):", min_value=0.5, step=0.01)
+# Input for height in inches
+height_in = st.number_input("Enter your height (inches):", min_value=1.0, step=0.1)
+
+# Convert height to meters for BMI calculation
+height_m = height_in * 0.0254
 
 # Calculate BMI
-if weight and height:
-    bmi = weight / (height ** 2)
+if weight and height_in:
+    bmi = weight / (height_m ** 2)
     st.write(f"Your BMI is: {bmi:.2f}")
 
     # Provide BMI interpretation
@@ -33,3 +34,4 @@ else:
 # Footer
 st.write("---")
 st.write("Developed with Streamlit. BMI = weight(kg) / height(m)^2")
+st.markdown("**Created by Ahmed Saif**", unsafe_allow_html=True)
