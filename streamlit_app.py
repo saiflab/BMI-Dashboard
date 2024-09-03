@@ -23,7 +23,7 @@ if weight and height_in:
     if bmi < 18.5:
         st.write("You are underweight.")
     elif 18.5 <= bmi < 24.9:
-        st.write("Onika tumi mota na.")
+        st.write("You have a normal weight.")
     elif 25 <= bmi < 29.9:
         st.write("You are overweight.")
     else:
