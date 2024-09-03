@@ -33,4 +33,4 @@ else:
 
 # Footer
 st.write("---")
-st.markdown("**Created by Ahmed Saif Tamim**", unsafe_allow_html=True)
+st.markdown("**Created by Ahmed Saif**", unsafe_allow_html=True)
